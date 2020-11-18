@@ -25,6 +25,11 @@ func TestDel(t *testing.T) {
 	gutil.Dump(cache.Del("test1"))
 }
 
+func TestIncr(t *testing.T) {
+	cache := D("default")
+	gutil.Dump(cache.Incr("user_id_incr"))
+}
+
 func TestRSet(t *testing.T) {
 	cache := R("user")
 	gutil.Dump(cache.Set("user1", "user1"))
